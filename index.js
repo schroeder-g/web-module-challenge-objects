@@ -108,6 +108,9 @@ The returned object should have the following characteristics:
 
 
 function carMaker(mileage) {
-    const newCar
-    
+    const newCar = {odometer: mileage, drive: function(moreMileage){
+      this.odometer += moreMileage;
+      return `Your car now has ${this.odometer} miles on it`;
+    }}
+    return newCar;
 }
